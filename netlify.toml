@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
+  force = false
+  
+[[redirects]]
+  from = "/presentation"
+  to = "/presentation.html"
+  status = 200 
+  force = false 
