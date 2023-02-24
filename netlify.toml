@@ -9,3 +9,9 @@
   to = "/presentation.html"
   status = 200 
   force = false 
+
+[[redirects]]
+  form = "/demo"
+  to = "/demo.html"
+  status = 200
+  force = false

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- HTML Meta Tags -->
+  <title>GenderEQ</title>
+  <meta name="description"
+    content="An AI powered moderation tool that helps eliminate/alleviate gender inequality and toxicity in the Internet." />
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://gendereq.lifelabsproject.tk" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="GenderEQ" />
+  <meta property="og:description"
+    content="An AI powered moderation tool that helps eliminate/alleviate gender inequality and toxicity in the Internet.." />
+  <meta property="og:image" content="https://lifelabsproject.tk/images/logo.png" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="twitter:domain" content="lifelabsproject.tk" />
+  <meta property="twitter:url" content="https://lifelabsproject.tk" />
+  <meta name="twitter:title" content="GenderEQ" />
+  <meta name="twitter:description"
+    content="An AI powered moderation tool that helps eliminate/alleviate gender inequality and toxicity in the Internet." />
+  <meta name="twitter:image" content="https://lifelabsproject.tk/images/logo.png" />
+
+  <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+  <meta content="#43cea2" data-react-helmet="true" name="theme-color" />
+  <link rel="stylesheet" href="tranchui-latest.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="icons/favicon.ico" />
+  <title>GenderEQ</title>
+</head>
+
+<body>
+  <div id="trailer">
+    <p id="trailer-text"></p>
+  </div>
+  <button class="button scroll-top" onclick="scrollToTop();" id="scrollTopButton">
+    ^
+  </button>
+  <div class="navContainer">
+    <ul class="navbar">
+      <li class="nav-item left" id="title">
+        <a href="index.html" class="semibold" id="title">GenderEQ</a>
+      </li>
+      <li class="nav-item left responsive">
+        <a href="javascript: openModal('aboutModal');">About</a>
+      </li>
+      <li class="nav-item left responsive">
+        <a href="mailto:tranchsoftware@gmail.com">How it works</a>
+      </li>
+      <li class="nav-item right responsive">
+        <a class="button" href="#problemTitle">Get Started</a>
+      </li>
+      <li class="nav-item right">
+        <a class="icon" id="showMore" href="javascript: navItemShow('showMore')"><img class="iconImg"
+            src="icons/down-arrow.png" /></a>
+      </li>
+    </ul>
+  </div>
+  <div class="loadScreen" id="loader">
+    <div class="lds-roller" id="roller">
+      <img class="error" src="icons/warning.png" style="width: 80px; height: 80px" />
+    </div>
+    <br />
+    <p id="loadStatus" class="subtitle" style="text-align: center">
+      JavaScript must be enabled to load this page.
+    </p>
+    <button class="button interactable" onclick="hideLoader();" style="margin-top: 10px" data-type="Skip page load">
+      Skip page load
+    </button>
+  </div>
+  <div class="parallax"></div>
+  <div class="vcenter">
+    <p class="title scroll-fade-out" style="text-align: center">
+      ISSUE: Gender Discrimination in the Current Era
+    </p>
+    <p class="subtitle scroll-fade-out" style="text-align: center">
+      And how we could fight it
+    </p>
+    <div class="buttons scroll-fade-out" style="
+          margin-top: 10px;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        ">
+      <button class="button" style="margin-left: 10px; text-align: center"
+        onclick="window.location.href = '#problemTitle';">
+        Learn more
+      </button>
+      <button class="button" style="margin-left: 10px; text-align: center"
+        onclick="loadPageWithImage('siteUpdated.html', 'images/updated.png');">
+        Changelog
+      </button>
+    </div>
+    <div class="menu hidden" id="menu-list">
+      <ul class="menu-list">
+        <li class="interactable" data-type="Give feedback on this project">
+          <a class="title" href="javascript:loadPage('feedback.html');">Give Feedback</a>
+        </li>
+        <li class="interactable" data-type="Music used in the show">
+          <a class="title" href="#problemTitle">The Problem</a>
+        </li>
+      </ul>
+      <ul class="menu-list">
+        <li class="right interactable" data-type="About the show">
+          <a class="title" href="javascript:loadPage('about.html');">About</a>
+        </li>
+        <li class="right interactable" data-type="Pricing of the show">
+          <a class="title" href="#solutionTitle">Solutions</a>
+        </li>
+      </ul>
+    </div>
+    <p id="problemTitle" class="title">What's the problem?</p>
+    <p id="problemDescription" class="subtitle">
+      Click on these cards to learn more.
+    </p>
+    <ul class="cards hidden" id="problem" style="
+          margin-top: 10px;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        ">
+      <li class="cards-item">
+        <a href="javascript: loadPageWithImage('workplace.html', 'images/workplace.png');">
+          <div class="card">
+            <div class="card-image">
+              <img class="lazyload" data-src="images/workplace.png" />
+            </div>
+            <div class="card-content">
+              <h2 class="card-title">Gender issues in the workplace</h2>
+              <p class="card-text">
+                In some workplaces, recruiters judge people based on their
+                gender.
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="cards-item">
+        <a href="javascript: loadPageWithImage('social.html', 'images/social.png');">
+          <div class="card">
+            <div class="card-image">
+              <img class="lazyload" data-src="images/social.png" />
+            </div>
+            <div class="card-content">
+              <h2 class="card-title">Gender issues in social media</h2>
+              <p class="card-text">
+                People can post harmful and offensive posts against a certain
+                gender.
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="cards-item">
+        <a href="javascript: loadPageWithImage('politics.html', 'images/politics.png');">
+          <div class="card">
+            <div class="card-image">
+              <img class="lazyload" data-src="images/politics.png" />
+            </div>
+            <div class="card-content">
+              <h2 class="card-title">Lack of political attention</h2>
+              <p class="card-text">
+                Some politicians keep giving deaf ears to these issues.
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <br />
+    <br />
+    <p id="solutionTitle" class="title">The solution</p>
+    <p id="solutionDescription" class="subtitle">
+      Solutions to these problems
+    </p>
+    <ul class="cards hidden" id="solution" style="
+          margin-top: 10px;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        ">
+      <li class="cards-item">
+        <a href="javascript: loadPageWithImage('no-stereotype.html', 'images/stereotype.png');">
+          <div class="card">
+            <div class="card-image">
+              <img class="lazyload" data-src="images/stereotype.png" />
+            </div>
+            <div class="card-content">
+              <h2 class="card-title">Stop the stereotyping.</h2>
+              <p class="card-text">
+                Stop believing that "men is stronger than women". That's not
+                true.
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="cards-item">
+        <a href="javascript: loadPageWithImage('promote.html', 'images/promote.png');">
+          <div class="card">
+            <div class="card-image">
+              <img class="lazyload" data-src="images/promote.png" />
+            </div>
+            <div class="card-content">
+              <h2 class="card-title">Promote gender equality.</h2>
+              <p class="card-text">
+                Instead of posting harmful and offensive posts to a certain
+                gender, promote gender equality instead.
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="cards-item">
+        <a href="javascript: loadPageWithImage('action.html', 'images/action.png');">
+          <div class="card">
+            <div class="card-image">
+              <img class="lazyload" data-src="images/action.png" />
+            </div>
+            <div class="card-content">
+              <h2 class="card-title">Start taking action.</h2>
+              <p class="card-text">
+                If we just keep exclaiming about the topic, politicians would
+                keep ignoring it.
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <footer class="footer">
+      <p class="footer-item title">GenderEQ</p>
+      <a class="footer-item subtitle underline" href="https://github.com/skywarspro15/School-Project"
+        target="__blank">View source on GitHub</a>
+      <a style="margin-left: 10px" class="footer-item subtitle underline"
+        href="javascript:openModal('credits');">Credits & Inspiration</a>
+      <p class="footer-item subtitle" id="onlineUsers"></p>
+      <p class="footer-item subtitle" id="totalUsers"></p>
+    </footer>
+  </div>
+  <div id="aboutModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p class="title">About GenderEQ</p>
+      <p class="subtitle">
+        GenderEQ is a community-driven group project by Tranch
+        Research Institute.<br /><br />
+        Our goal for this project is to solve today's problems people face.
+        <br />
+        In each quarter of the year, we make different content on this site.
+        and currently, we try and mitigate today's gender issues.
+        <br />
+        <br />
+        Through modern ways of developing solutions, we're trying to mitigate
+        today's gender issues.
+      </p>
+    </div>
+  </div>
+  <div id="announcementModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p class="title">Announcement from the team</p>
+      <p class="subtitle" id="announcementContent">Loading...</p>
+    </div>
+  </div>
+  <div id="credits" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p class="title">Credits & Inspiration</p>
+      <p class="subtitle">Things that made this site possible!</p>
+      <br />
+      <a class="subtitle underline" href="https://unsplash.com" target="_blank">Cover image from Unsplash</a>
+      <br />
+      <a class="subtitle underline" href="https://flaticon.com" target="_blank">Icons from Flaticon</a>
+      <br />
+      <a class="subtitle underline" href="https://repl.it" target="_blank">Backend servers from Replit</a>
+      <br />
+      <a class="subtitle underline" href="https://netlify.app" target="_blank">
+        Front-end hosting from Netlify
+      </a>
+      <br />
+      <a class="subtitle underline" href="https://freenom.com" target="_blank">
+        Domain from Freenom
+      </a>
+      <br />
+      <br />
+      <a class="subtitle underline" href="https://linear.app/" target="_blank">Design Inspiration from:
+        https://linear.app/</a>
+    </div>
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+  integrity="sha512-q583ppKrCRc7N5O0n2nzUiJ+suUv7Et1JGels4bXOaMFQcamPk9HjdUknZuuFjBNs7tsMuadge5k9RzdmO+1GQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="tranchui.js"></script>
+<script src="script.js"></script>
+<script src="socket.js" type="module"></script>
+
+</html>
